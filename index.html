@@ -12,9 +12,25 @@
             <p>My Todolist App</p>
         </div>
         <div class="ctl">
-            <button>Add New Task</button>
+            <button onclick="viewTaskForm()">Add New Task</button>
         </div>
     </nav>
+    <div>
+        <form action="" class="addTaskForm">
+            <div>
+                <label for="taskDescription">Task Description</label>
+                <input type="text" id="taskDescription">
+            </div>
+            <div>
+                <label for="due">Due date</label>
+                <input type="date" id="due">
+            </div>
+            <button>Add Task</button>
+        </form>
+        
+    </div>
     <h1>Hello this is my todo list app!</h1>
+    <h1>Click on <strong>Add New Task</strong> button to view the input task form</h1>
+    <script src="script.js"></script>
 </body>
 </html>
