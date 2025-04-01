@@ -90,3 +90,16 @@ body{
 .container{
     display: none;
 }
+
+.todoList{
+    padding: 2rem;
+
+}
+
+.todoList .todoItem{
+    background-color: #D76C82;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;
+    margin: 0.5rem;
+}
