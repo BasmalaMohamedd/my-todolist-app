@@ -6,6 +6,19 @@ let todoList = document.querySelector(".todoList");
 
 let tasks = [];
 
+let numOfTasks = tasks.length; //using the array length for future changes
+
+if(numOfTasks == 0)
+{
+    viewTaskForm();
+}
+else
+{
+    for(let i = 0; i < numOfTasks; i++)
+    {
+        addTaskToPage( tasks[i].taskDueDate, tasks[i].taskTitle, i);
+    }
+}
 
 
 
@@ -19,17 +32,18 @@ addTaskBtn.addEventListener("click", (event)=>{
     event.preventDefault();
     let taskTitleVal = taskTitle.value;
     let taskDueDateVal = taskDueDate.value;
-    tasks.push({taskTitleVal, taskDueDateVal});
-    addTaskToPage(taskDueDateVal, taskTitleVal);
+    tasks.push({taskTitle:taskTitleVal, taskDueDate:taskDueDateVal});
+    addTaskToPage(taskDueDateVal, taskTitleVal, numOfTasks);
+    numOfTasks++;
     addTaskForm.style.display = "none";
 
 })
 
 
-function addTaskToPage(dueDate, taskTitle)
+function addTaskToPage(dueDate, taskTitle, taskId)
 {
     let todoItemTag = `
-    <div class="todoItem">
+    <div class="todoItem" id="todoItem${taskId}">
                 <div>
                     <button>Done</button>
                 </div>

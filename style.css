@@ -97,6 +97,7 @@ body{
 }
 
 .todoList .todoItem{
+    /*style inner content*/
     background-color: #D76C82;
     border-radius: 2rem;
     display: flex;
