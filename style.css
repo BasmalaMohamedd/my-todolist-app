@@ -66,9 +66,12 @@ body{
 
 .addTaskForm label{
     color:#EBE8DB;
+    font-size: large;
+    font-weight: bold;
 }
 
 .addTaskForm input[type=text], input[type=date] {
+    font-size: medium;
     width: 100%;
     padding: 0.25em;
     border: 1px solid #ccc;
@@ -103,4 +106,6 @@ body{
     display: flex;
     flex-direction: row;
     margin: 0.5rem;
+    justify-content: space-around;
+    border: #3D0301 2px;
 }
