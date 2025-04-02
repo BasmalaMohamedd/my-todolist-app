@@ -45,7 +45,7 @@ function addTaskToPage(dueDate, taskTitle, taskId)
     let todoItemTag = `
     <div class="todoItem" id="todoItem${taskId}">
                 <div>
-                    <button>Done</button>
+                    <input type="checkbox"/>
                 </div>
                 <div>
                 
