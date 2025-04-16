@@ -8,16 +8,18 @@ let tasks = [];
 
 let numOfTasks = tasks.length; //using the array length for future changes
 
-if(numOfTasks == 0)
+if(tasks.length == 0)
 {
     viewTaskForm();
 }
 else
 {
-    for(let i = 0; i < numOfTasks; i++)
-    {
-        addTaskToPage( tasks[i].taskDueDate, tasks[i].taskTitle, i);
-    }
+
+    //code refactoring
+    tasks.forEach(task => {
+        addTaskToPage(task.dueDate, task.title, task.id);
+        
+    });
 }
 
 
@@ -32,8 +34,9 @@ addTaskBtn.addEventListener("click", (event)=>{
     event.preventDefault();
     let taskTitleVal = taskTitle.value;
     let taskDueDateVal = taskDueDate.value;
-    tasks.push({taskTitle:taskTitleVal, taskDueDate:taskDueDateVal});
-    addTaskToPage(taskDueDateVal, taskTitleVal, numOfTasks);
+    let taskId = numOfTasks;
+    tasks.push({id: taskId, title:taskTitleVal, dueDate:taskDueDateVal});
+    addTaskToPage(taskDueDateVal, taskTitleVal, taskId);
     numOfTasks++;
     addTaskForm.style.display = "none";
 
@@ -54,11 +57,33 @@ function addTaskToPage(dueDate, taskTitle, taskId)
                
             </div>
                 <div>
-                    <button>Delete</button>
+                    <button onclick="deleteTask(${taskId})">Delete</button>
                 </div>
                 
             </div>
     `;
 
     todoList.innerHTML += todoItemTag;
+}
+
+
+function deleteTask(taskId){
+    tasks = tasks.filter((task)=>{
+        return task.id != taskId;
+    });
+    todoList.innerHTML = '';
+    
+    if(tasks.length == 0)
+        {
+            viewTaskForm();
+        }
+        else
+        {
+        
+            //code refactoring
+            tasks.forEach(task => {
+                addTaskToPage(task.dueDate, task.title, task.id);
+                
+            });
+        }
 }
