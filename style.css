@@ -88,6 +88,10 @@ body{
     border-style: none;
     box-shadow: 1px 1px 2px #B03052;
   }
+.addTaskForm button:hover {
+    cursor: pointer;
+    
+  }
 
   
 .container{
@@ -104,7 +108,27 @@ body{
     background-color: #D76C82;
     border-radius: 2rem;
     display: flex;
-    flex-direction: row;
     margin: 0.5rem;
     justify-content: space-around;
 }
+
+.todoItem .deleteBtn{
+    width: 5rem;
+    height: 3rem;
+    margin: 1rem;
+    border-radius: 2rem;
+    font-size: medium;
+    font-weight: bold;
+    background-color:#B03052;
+    color:#3D0301;
+    border-color: #B03052;
+}
+.todoItem .deleteBtn:hover{
+    cursor: pointer;
+    background-color: #3D0301;
+    color: #EBE8DB;
+    border-color:#3D0301;
+    box-shadow: 2px 2px 4px #3D0301;
+
+}
+

@@ -45,6 +45,7 @@ addTaskBtn.addEventListener("click", (event)=>{
 
 function addTaskToPage(dueDate, taskTitle, taskId)
 {
+    //on delete task move task left and give the user the option to confirm delete or cancel before deleting
     let todoItemTag = `
     <div class="todoItem" id="todoItem${taskId}">
                 <div>
@@ -57,7 +58,7 @@ function addTaskToPage(dueDate, taskTitle, taskId)
                
             </div>
                 <div>
-                    <button onclick="deleteTask(${taskId})">Delete</button>
+                    <button class="deleteBtn" onclick="deleteTask(${taskId})">Delete</button>
                 </div>
                 
             </div>
@@ -87,3 +88,5 @@ function deleteTask(taskId){
             });
         }
 }
+
+
