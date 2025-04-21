@@ -19,11 +19,19 @@
         <form class="addTaskForm">
             <div>
                 <label for="taskTitle">Task Title</label>
-                <input type="text" id="taskTitle">
+                <input type="text" id="taskTitle" class="taskTitle">
             </div>
             <div>
-                <label for="due">Due date</label>
-                <input type="date" id="due">
+                <label for="taskDescription">Task Description</label>
+                <input type="text" id="taskDescription" class="taskDescription">
+            </div>
+            <div>
+                <label for="taskDueDate">Due date</label>
+                <input type="date" id="taskDueDate" class="taskDueDate">
+            </div>
+            <div>
+                <label for="taskDueTime">Time</label>
+                <input type="time" id="taskDueTime" class="taskDueTime">
             </div>
             <button type="submit" class="addTaskBtn">Add Task</button>
         </form>
@@ -34,6 +42,12 @@
     </div>
 
 
-    <script src="script.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/Task.js"></script>
+    <script src="scripts/taskFormScript.js"></script>
+    <script src="scripts/taskItemScript.js"></script>
 </body>
 </html>
+
+
+

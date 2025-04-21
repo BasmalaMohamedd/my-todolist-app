@@ -1,0 +1,16 @@
+Add task to page 
+view tasks
+
+edit task
+delete task
+
+mark task as completed
+mark task as not completed
+
+filter tasks by completed
+filter tasks by not completed
+
+sort tasks by date
+
+----------------------------------------
+save tasks in local storage
