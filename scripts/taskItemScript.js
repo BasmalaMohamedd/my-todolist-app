@@ -41,6 +41,7 @@ function editTask(taskId){
 }
 
 function deleteTask(taskId){
+
     console.log("delete task : " + taskId);
     tasks = tasks.filter((task)=>{
         console.log(tasks);
