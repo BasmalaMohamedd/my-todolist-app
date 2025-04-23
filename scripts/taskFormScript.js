@@ -1,6 +1,6 @@
 import { TaskManager } from "./TaskManager.js";
-import { TasksListDOMManager } from "./TasksListDOMManager.js";
 import { Task } from "./Task.js";
+import { TasksListDOMManager } from "./TasksListDOMManager.js";
 let taskTitle = document.querySelector(".taskTitle");
 let addTaskBtn = document.querySelector(".addTaskBtn");
 let listBody = document.querySelector(".listBody");

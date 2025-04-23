@@ -1,6 +1,8 @@
-import { Task } from "./Task.js";
+import { TaskManager } from "./TaskManager.js";
+
 export class TasksListDOMManager{
 
+    constructor(){}
     #notCheckedIconSrc = "interface.png";
     #checkIconSrc = "done.png";
 
@@ -8,7 +10,7 @@ export class TasksListDOMManager{
         let taskTag = `<div class="taskItem" id="task-${task.getId()}">
                             <div class="icon check-icon"><img src="interface.png" alt=""></div>
                             <div class="taskTitle">${task.getTitle()}</div>
-                            <div class="icon del-icon"><img src="delIcon.png" alt=""></div>
+                            <div class="icon del-icon"><img src="delIcon.png" alt="" onclick="deleteTask(${task.getId()})"></div>
     
                         </div>
 `;
@@ -19,6 +21,7 @@ export class TasksListDOMManager{
 
     
 
+        
     
 
     addTaskToPage(task, container){

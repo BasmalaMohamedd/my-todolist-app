@@ -3,9 +3,7 @@ let tasks = [];
 export class TaskManager{
 
     constructor(){}
-    addTask(task){
-        console.log(tasks);
-        
+    addTask(task){        
         tasks.push(task);
     }
     getAllTasks(){

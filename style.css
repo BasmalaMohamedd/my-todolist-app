@@ -21,32 +21,10 @@ body{
     
 }
 
-.navbar .ctl{
-    align-content: center;
-}
 
-.navbar .ctl button{
-    border-color: #D76C82;
-    height: 50%;
-    border-radius: 1rem;
-    color:#EBE8DB;
-    background-color: #D76C82;
-    font-weight: bold;
-    border-style: none;
-    box-shadow: 1px 1px 2px #3D0301;
-
-}
-.navbar .ctl button:hover{
-    
-    box-shadow: 2px 2px 4px #3D0301;
-    cursor: pointer;
-
-}
-.main{
-
-}
 
 .todaysDate{
+    font-size: x-large;
     text-align: center;
     color:#3D0301;
 }
@@ -165,5 +143,5 @@ body{
 .tasksList .listBody .taskItem .taskTitle{
 
     font-weight: bolder;
-    font-size: x-large;
+    font-size: large;
 }
