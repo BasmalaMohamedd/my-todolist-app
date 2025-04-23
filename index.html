@@ -7,45 +7,43 @@
     <title>My Todolist App</title>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <p>My Todolist App</p>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <p>My Todolist App</p>
+            </div>
+            <div class="ctl">
+                <button onclick="viewTaskForm()">Add New Task</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="todaysDate">
         </div>
-        <div class="ctl">
-            <button onclick="viewTaskForm()">Add New Task</button>
+        <div class="taskInput">
+            <form class="taskInputForm">
+                <input type="text" class="taskTitle">
+                <button class="addTaskBtn">ADD TASK</button>
+            </form>
         </div>
-    </nav>
-    <div class="container">
-        <form class="addTaskForm">
-            <div>
-                <label for="taskTitle">Task Title</label>
-                <input type="text" id="taskTitle" class="taskTitle">
+        <div class="tasksList">
+            <div class="listHeader">
+                <button class="filterBtn">Filter</button>
             </div>
-            <div>
-                <label for="taskDescription">Task Description</label>
-                <input type="text" id="taskDescription" class="taskDescription">
+            <div class="listBody">
+                
             </div>
-            <div>
-                <label for="taskDueDate">Due date</label>
-                <input type="date" id="taskDueDate" class="taskDueDate">
-            </div>
-            <div>
-                <label for="taskDueTime">Time</label>
-                <input type="time" id="taskDueTime" class="taskDueTime">
-            </div>
-            <button type="submit" class="addTaskBtn">Add Task</button>
-        </form>
-        
-    </div>
-    <div class="todoList">
-        
-    </div>
+            
+        </div>
+    </main>
+    <footer>
 
+    </footer>
+    
+    
 
-    <script src="scripts/script.js"></script>
-    <script src="scripts/Task.js"></script>
-    <script src="scripts/taskFormScript.js"></script>
-    <script src="scripts/taskItemScript.js"></script>
+    <script type="module" src="scripts/script.js"></script>
+    <script type="module" src="scripts/taskFormScript.js"></script>
 </body>
 </html>
 

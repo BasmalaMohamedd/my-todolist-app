@@ -1,24 +1,28 @@
-var tasksIdIncremental = 0;
+var tasksIdIncremental = 0; //Task static variable
 
-class Task{
-    id;
-    title;
-    description;
-    dueDate;
-    dueTime;
-    completed;
+export class Task{
+    #id;
+    #title;
+    #completed;
 
-    constructor(title, description, dueDate, dueTime){
-        this.title = title;
-        this.description = description;
-        //change type to date instead of string
-        this.dueDate = dueDate;
-        this.dueTime = dueTime;
-        this.id = tasksIdIncremental;
+    constructor(title){
+        this.#title = title;
+        this.#completed = false;
+        this.#id = tasksIdIncremental;
         tasksIdIncremental++;
-        this.completed = false;
     }
 
+    getTitle(){
+        return this.#title;
+    }
+
+    markAsCompleted(){
+        this.#completed = true;
+    }
+
+    getId(){
+        return this.#id;
+    }
     
     
     

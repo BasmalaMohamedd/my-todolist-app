@@ -1,43 +1,35 @@
-let addTaskForm = document.querySelector(".container");
+import { getTodaysDate } from "./dateContainer.js";
+import { TaskManager } from "./TaskManager.js";
+import { TasksListDOMManager } from "./TasksListDOMManager.js";
+
 let todoList = document.querySelector(".todoList");
+let todaysDate = document.querySelector(".todaysDate");
+let listBody = document.querySelector(".listBody");
+let deleteBtn = document.querySelector(".deleteBtn");
+//displays today's day and date
+todaysDate.innerHTML += getTodaysDate();
+//update today's day and date every 1 hour 
+setInterval(()=>{
+    todaysDate.innerHTML = getTodaysDate();
+    console.log("10 Seconds PASSED");
+    
 
-let tasks = [];
-
-displayTasksList(tasks);
+}, 216000);
 
 
-function displayTasksList(tasksList){
-    if(tasksList.length == 0)
-        {
-            viewTaskForm();
-        }
-        else
-        {
-        
-            tasksList.forEach(task => {
-                addTaskToPage(task);
-                
-            });
-        }
-}
 
-function viewTaskForm(){
-    addTaskForm.style.display = "contents";
+// function deleteTask(taskId){
+//     //not working
+//     TaskManager.deleteTaskById(taskId);
+//     listBody.innerHTML = "";
+//     TaskManager.getAllTasks.forEach((task)=>{
+//         TasksListDOMManager.addTaskToPage(task, listBody);
 
-}
+//     })
 
-function addTask(task){
-    tasks.push(task);
-    addTaskToPage(task);
-    addTaskToLocalStorage(task);
-}
+// }
 
-function addTaskToPage(task){
-    console.log(task);
-    addTaskTag(task, todoList);
-}
 
-function addTaskToLocalStorage(task){
-    console.log("add task to local storage");
-}
 
+
+// window.deleteTask = deleteTask;
