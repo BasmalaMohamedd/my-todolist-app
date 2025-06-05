@@ -2,12 +2,21 @@ let tasks = [];
 
 export class TaskManager{
 
-    constructor(){}
-    addTask(task){        
-        tasks.push(task);
-    }
+    
     getAllTasks(){
         return tasks;
+    }
+
+    getAllTasksTitle()
+    {
+        return tasks.map((task)=>{
+            return task.getTitle();
+        })
+    }
+
+    addTask(task){        
+        tasks.push(task);
+        localStorage.setItem('tasks', this.getAllTasksTitle());
     }
 
     deleteTaskById(taskId)
@@ -15,6 +24,8 @@ export class TaskManager{
         tasks = tasks.filter((task)=>{            
             return task.getId() != taskId;
         });
+
+        localStorage.setItem('tasks', this.getAllTasksTitle());
 
     }
 

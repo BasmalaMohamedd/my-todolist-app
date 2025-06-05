@@ -1,4 +1,4 @@
-var tasksIdIncremental = 0; //Task static variable
+let tasksIdIncremental = 0; //Task static variable
 
 export class Task{
     #id;
